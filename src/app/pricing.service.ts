@@ -13,7 +13,7 @@ const SECTION_LABELS: Record<string, string> = {
   'additional_charge': 'ADDITIONAL CHARGES'
 };
 
-// A cell can be a number OR a string like "dropout", "n/a", "quote"
+
 export type CellValue = number | string;
 
 export interface PricingRow {
@@ -30,7 +30,7 @@ export interface AdditionalCharge {
 export interface PricingSection {
   key: string;
   label: string;
-  columns: CellValue[];          // quantity break points
+  columns: CellValue[];         
   rows: PricingRow[];
   discount: number;
   additionalCharges: AdditionalCharge[];
@@ -58,11 +58,10 @@ export class PricingService {
         rows: [{ label: 'Price', values: [...d.price] }],
         discount: d.discount ?? 0,
         additionalCharges: [],
-        isOpen: key === 'default'  // open first section by default
+        isOpen: key === 'default'  
       });
     }
 
-    // FR section: size-based — each size_tier entry becomes a row
     if (rui.fr) {
       result.push({
         key: 'fr',
@@ -155,7 +154,7 @@ export class PricingService {
   }
 }
 
-// Converts raw additional_charge object into display-friendly array
+
 function formatName(key: string): string {
   return key.replace(/_/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
 }

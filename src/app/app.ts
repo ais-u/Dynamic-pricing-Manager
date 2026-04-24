@@ -11,7 +11,6 @@ import { PricingService, CellValue } from './pricing.service';
 export class App {
   readonly pricing = inject(PricingService);
 
-  // Tracks the "new column qty" input value per section key
   newColInputs = signal<Record<string, string>>({});
 
   getNewColInput(key: string): string {
@@ -45,7 +44,7 @@ export class App {
     if (!isNaN(val)) this.pricing.updateDiscount(sectionKey, val);
   }
 
-  // Returns true for special string values like "dropout", "n/a"
+ 
   isSpecial(val: CellValue): boolean {
     return typeof val === 'string';
   }
