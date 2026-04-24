@@ -3,8 +3,9 @@
 A Dynamic Pricing Management UI built with Angular (latest) using standalone components and signals.
 
 ## Live Demo
-[View Live →](https://your-vercel-url.vercel.app)
+[View Live →](https://dynamic-pricing-manager.vercel.app)
 
+## Preview
 ![Preview](preview.png)
 
 ## Features
@@ -15,6 +16,7 @@ A Dynamic Pricing Management UI built with Angular (latest) using standalone com
 - Collapsible sections (Default, Inserts, FR, etc.)
 - Handles flat, size-based and additional charge formats
 - Special values like `dropout`, `n/a` displayed as badges
+- Mobile responsive
 
 ## Tech Stack
 - Angular 19 (standalone components)
@@ -25,5 +27,9 @@ A Dynamic Pricing Management UI built with Angular (latest) using standalone com
 ## Run Locally
 \`\`\`bash
 npm install
+\`\`\`
+\`\`\`bash
 ng serve
 \`\`\`
+
+Open http://localhost:4200
