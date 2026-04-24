@@ -315,8 +315,14 @@ td:first-child {
 /* ── Add column bar ── */
 .add-col-bar {
   display: flex;
+  flex-direction: column;    /* stack vertically on small screens */
   gap: 10px;
   margin-bottom: 16px;
+}
+
+
+.pm-btn-add {
+  width: 100%;               /* full width button */
 }
 
 .add-col-bar input[type="number"] {
@@ -327,7 +333,8 @@ td:first-child {
   font-family: var(--mono);
   font-size: 13px;
   padding: 8px 14px;
-  width: 180px;
+  width: 100%;
+  /*width: 180px;*/
   outline: none;
   transition: border-color 0.2s;
   -moz-appearance: textfield;
